@@ -1,2 +1,2 @@
 # faq-section
-faq section f main website
+faq section of main website

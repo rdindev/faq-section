@@ -85,23 +85,7 @@ padding-top: 2rem;
   transition: 0.4s ease-out;
 }
 
-.circle {
-  position: absolute;
-  top: 150px;
-  left: calc(50% - 60px);
-}
 
-.stroke {
-  stroke: white;
-  stroke-dasharray: 360;
-  stroke-dashoffset: 360;
-  transition: 0.6s ease-out;
-}
-
-svg {
-  fill: #17141d;
-  stroke-width: 2px;
-}
 
 .card:hover .stroke {
   stroke-dashoffset: 100;

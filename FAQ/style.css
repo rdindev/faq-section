@@ -1,98 +1,101 @@
-body {
-  background-color: #EFEEE5;
-  font-family: 'Open Sans', sans-serif;
+/*  import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
 }
-.faq-header{
-  font-family: Ubuntu;
-  color: #1F4690;
-  font-size: 5rem;
-  font-weight: 600;
-  text-align: center;
-padding-top: 2rem;
+section{
+    padding: 100px 0;
 }
-.container {
-  position: absolute;
-  height: 300px;
-  width: 100%;
-  top: 260px;
-  left: calc(7% - 100px);
-  display: flex;
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    padding-bottom: 10px;
+    font-family: 'Poppins';
 }
-
-.card {
-  display: flex;
-  height: 280px;
-  width: 21.5rem;;
-  background-color: #274546;
-  border-radius: 10px;
-  box-shadow: -0.1rem 0 3rem #A0E4F1;
-  transition: 0.4s ease-out;
-  position: relative;
-  left: 4rem;
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.faq{
+    font-family: 'Poppins';
 }
 
-.card:not(:first-child) {
-    margin-left: -180px;
+.faq .serv-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.card:hover {
-  transform: translateY(-20px);
-  transition: 0.4s ease-out;
+.faq, .teams{
+    color:rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
 }
-
-.card:hover ~ .card {
-  position: relative;
-  left: 50px;
-  transition: 0.4s ease-out;
+.faq .title::before,
+.teams .title::before{
+    background: #fff;
 }
+.faq .serv-content
+{
+   display: flex;
+    text-align:center ;
+    justify-content: center;
+    align-items: center;
 
-.title {
-  color: white;
-  font-weight: 200;
-  position: absolute;
-  left: 15px;
-  top: 0;
 }
-
-.bar {
-  position: absolute;
-  top: 110px;
-  left: 20px;
-  height: 5px;
-  width: 150px;
-  padding-bottom: 5px;
+.faq .serv-content .card{
+    width: calc(50% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
-
-.emptybar {
-  background-color: #2e3033;
-  width: 200%;
-  height: 100%;
+.faq .serv-content .card:hover{
+    background: white;
+    color: #111;
+    border-color: #111;
 }
-
-.filledbar {
-  position: absolute;
-  top: 0px;
-  z-index: 3;
-  width: 0px;
-  height: 100%;
-  background: rgb(0,154,217);
-  background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(216,44,32,1) 65%, rgba(255,203,0,1) 100%);
-  transition: 0.6s ease-out;
+.faq .serv-content .card .box{
+    transition: all 0.3s ease;
 }
-
-.card:hover .filledbar {
-  width: 200px;
-  transition: 0.4s ease-out;
+.faq .serv-content .card:hover .box{
+    transform: scale(1.05);
 }
-
-
-
-.card:hover .stroke {
-  stroke-dashoffset: 100;
-  transition: 0.6s ease-out;
+.faq .serv-content .card i{
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    transition: color 0.3s ease;
 }
-p{
-  color: white;
-  width: 150%;
-  padding-top: 10px;
+.faq .serv-content .card:hover i{
+    color: #fff;
+    border-color: #111;
+}
+.faq .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+/* responsive media query start */
+@media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+    .faq .serv-content .card{
+        width: 100%;
+    }
 }
